@@ -1,8 +1,8 @@
 # GPUImageTest
 利用GPUImage进行滤镜拍照
 控制的视图为
- ![image](https://github.com/xc19930909yu/GPUImageTest/blob/master/xaioguopaizhao.PNG)
- 
+
+ ![image](https://github.com/xc19930909yu/GPUImageTest/blob/master/xaioguopaizhao.PNG) 
 初始化
 /// 录制相机
 @property(nonatomic, strong)GPUImageStillCamera *camera;
