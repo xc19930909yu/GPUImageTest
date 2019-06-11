@@ -4,7 +4,7 @@
 
  ![image](https://github.com/xc19930909yu/GPUImageTest/blob/master/xaioguopaizhao.PNG) 
 
-#初始化
+# 初始化
 /// 录制相机
 @property(nonatomic, strong)GPUImageStillCamera *camera;
 /// 过滤的视图
@@ -16,7 +16,7 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
 ///防止允许声音通过的情况下，避免录制第一帧黑屏闪屏  拍摄视频时开启 拍照时不用开启
 /// [self.camera addAudioInputsAndOutputs];
 
-// 用到的过滤器,组合成一个过滤器组进行使用 
+# 用到的过滤器,组合成一个过滤器组进行使用 
 /// 美白过滤器
 @property(nonatomic, strong)GPUImageBrightnessFilter *brightFilter;
 
@@ -28,8 +28,8 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
 
 // 曝光
 @property(nonatomic, strong)GPUImageExposureFilter *exposeFilter;
-# 生成组合过滤器的代码
-# 获取默认的滤镜组
+
+# 生成组合过滤器的代码 获取默认的滤镜组
 - (GPUImageFilterGroup*)getCurrentFillterGroup{
     GPUImageFilterGroup *filterGroup = [[GPUImageFilterGroup alloc] init];
     //创建滤镜(设置滤镜的引来关系)
@@ -46,7 +46,7 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
     filterGroup.terminalFilter = self.saturateFilter;
     return filterGroup;  
 }
-#后给相机添加上过滤器， 并开始采集数据
+# 后给相机添加上过滤器， 并开始采集数据
  GPUImageFilterGroup *beautiFilter = [self
                                          getCurrentFillterGroup];
      //设置GPUImage的响应链
@@ -55,4 +55,4 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
     ///开启采集
     [self.camera startCameraCapture];
     
- #具体详细的代码在demo中
+# 具体详细的代码在demo中
