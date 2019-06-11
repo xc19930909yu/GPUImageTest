@@ -1,6 +1,6 @@
 # GPUImageTest
 利用GPUImage进行滤镜拍照
-控制的视图为
+拍摄照片时的效果图为
 
  ![image](https://github.com/xc19930909yu/GPUImageTest/blob/master/xaioguopaizhao.PNG) 
 
@@ -16,7 +16,7 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
 ///防止允许声音通过的情况下，避免录制第一帧黑屏闪屏  拍摄视频时开启 拍照时不用开启
 /// [self.camera addAudioInputsAndOutputs];
 
-# 用到的过滤器,组合成一个过滤器组进行使用 
+# 用到的过滤器,组合成一个过滤器组进行使用 当然也可以根据自己的需求自定义过滤器
 /// 美白过滤器
 @property(nonatomic, strong)GPUImageBrightnessFilter *brightFilter;
 
@@ -46,7 +46,7 @@ self.camera.horizontallyMirrorFrontFacingCamera = YES;
     filterGroup.terminalFilter = self.saturateFilter;
     return filterGroup;  
 }
-# 后给相机添加上过滤器， 并开始采集数据
+# 最后给相机添加上过滤器， 并开始采集数据
  GPUImageFilterGroup *beautiFilter = [self
                                          getCurrentFillterGroup];
      //设置GPUImage的响应链
