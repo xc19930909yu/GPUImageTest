@@ -117,9 +117,8 @@
     self.camera.outputImageOrientation =  UIInterfaceOrientationPortrait;
     self.camera.horizontallyMirrorFrontFacingCamera = YES;
     
-    
     ///防止允许声音通过的情况下，避免录制第一帧黑屏闪屏
-    [self.camera addAudioInputsAndOutputs];
+    // [self.camera addAudioInputsAndOutputs];
     
     GPUImageFilterGroup *beautiFilter = [self
                                          getCurrentFillterGroup];
